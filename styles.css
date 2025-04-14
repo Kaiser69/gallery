@@ -1,0 +1,262 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+.u-avatar {
+    border-radius: 50%;
+    width: 105px;
+    height: 105px;
+    object-fit: cover;
+    margin: 25px;
+}
+
+.hero-header {
+    position: relative;
+    height: 80vh;
+    background: url('img/hd1.JPG') center center/cover no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    width: 100%;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #5cd890;
+}
+
+/* Main Section */
+#artwork-list h2 {
+    font-size: 4em; /* Large font size */
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin: 60px 0; /* Add top and bottom margin for spacing */
+    letter-spacing: 2px; /* Slightly spaced letters */
+    text-transform: uppercase; /* Make the text all uppercase */
+    background-image: linear-gradient(to right, #007bff, #00d2ff); /* Gradient background */
+    -webkit-background-clip: text; /* Clip background to text */
+    background-clip: text;
+    padding: 10px 0;
+    border-bottom: 3px solid #00d2ff; /* Add a border at the bottom */
+    opacity: 0; /* Start as invisible for animation */
+    animation: fadeInAnimation 1.5s forwards; /* Animation for fade-in */
+}
+
+/* Animation for fading in the heading */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    #artwork-list h2 {
+        font-size: 2.5em; /* Slightly smaller on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #artwork-list h2 {
+        font-size: 2em; /* Even smaller for very small screens */
+    }
+}
+
+.art-section {
+    margin: 40px 0;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.artwork-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.artwork-item {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.artwork-item:hover {
+    transform: scale(1.05);
+}
+
+.artwork-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+}
+
+.artwork-item h4 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.artwork-item p {
+    margin: 5px 0;
+}
+
+button {
+    background-color: #5cd890;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4bb876;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: 5% auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 0px;
+}
+
+#caption {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ddd;
+}
+
+/* Responsive Layouts */
+@media (max-width: 1024px) {
+    .artwork-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .artwork-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #artwork-list h2 {
+        font-size: 2em;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+
+    .artwork-item h4 {
+        font-size: 1em;
+    }
+}
+

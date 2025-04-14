@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Art Portfolio - Kaiser A ÖzHun</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="hero-header">
+        <div class="overlay"></div>
+        <div class="header-content animated-header">
+            <div class="artist-avatar">
+                <img src="img/arts.jpg" alt="Kaiser A ÖzHun" class="u-avatar" />
+            </div>
+
+            <h1>Kaiser A ÖzHun</h1>
+            <p style="color: turquoise;">Lund Sweden</p>
+            <p style="color: orange;"><strong>Accomplished Artist Bridging Traditional and Contemporary Practices</strong></p>
+            <p>
+                I am a multidisciplinary artist with a background in both visual arts and art history. My journey began with classical training in China and continued with an MFA grounded in Renaissance techniques, followed by a Master’s in East Asian Art from Sotheby’s Institute of Art.
+               <p>My work blends traditional methods—such as ink, drawing, and pigment—with contemporary forms and digital media, including AI-assisted tools. I’m particularly inspired by the Buddhist cave art of the Tarim Basin (Kizil, Khotan, Turfan) and the cultural exchanges across Central Asia, China, Korea, and Japan. Through this lens, I explore identity, history, and the spiritual in visual culture.
+            </p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="./contact.html">Contact</a>
+    </nav>
+
+    <!-- Main Section with 4-Column Layout for Artworks -->
+    <section id="artwork-list">
+        <h2>Featured Artworks</h2>
+
+        <!-- Realistic Classic Art Section -->
+        <div class="art-section">
+            <h3>Realistic Classic Art</h3>
+            <div class="artwork-container">
+                <!-- Artwork Items -->
+                <div class="artwork-item">
+                    <img src="img/real1.jpg" alt="Realistic Artwork 1" onclick="openModal(this)">
+                    <h4>Wolf</h4>
+                    <p><strong>Size:</strong> 50x70 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2500</p>
+                    <button onclick="contactArtist('Realistic Artwork 1')">Inquire</button>
+                </div>
+                <!-- Repeat other artworks similarly -->
+                <div class="artwork-item">
+                    <img src="img/real5.jpg" alt="White Stallion" onclick="openModal(this)">
+                    <h4>White Stallion</h4>
+                    <p><strong>Size:</strong> 65x87 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €3500</p>
+                    <button onclick="contactArtist('White Stallion')">Inquire</button>
+                </div>
+                <div class="artwork-item">
+                    <img src="img/real6.jpg" alt="Black Stallion" onclick="openModal(this)">
+                    <h4>Black Stallion </h4>
+                    <p><strong>Size:</strong> 70 x 80 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2300</p>
+                    <button onclick="contactArtist('Black Stallion')">Inquire</button>
+                </div>
+                <div class="artwork-item">
+                    <img src="img/real7.jpg" alt="Riverbank Neighborhood" onclick="openModal(this)">
+                    <h4>Riverbank Neighborhood</h4>
+                    <p><strong>Size:</strong> 65 x 70 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2900</p>
+                    <button onclick="contactArtist('Riverbank Neighborhood')">Inquire</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Abstract Art Section -->
+        <div class="art-section">
+            <h3>Modern Abstract Art</h3>
+            <div class="artwork-container">
+                <!-- Artwork Items -->
+                <div class="artwork-item">
+                    <img src="img/abstract1.jpg" alt="Abstract Artwork 1" onclick="openModal(this)">
+                    <h4>Abstract Artwork 1</h4>
+                    <p><strong>Size:</strong> 80x80 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2200</p>
+                    <button onclick="contactArtist('Abstract Artwork 1')">Inquire</button>
+                </div>
+                <!-- Repeat other artworks similarly -->
+                <div class="artwork-item">
+                    <img src="img/abstract2.jpg" alt="Abstract Artwork 1" onclick="openModal(this)">
+                    <h4>Abstract Artwork 1</h4>
+                    <p><strong>Size:</strong> 80x80 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2200</p>
+                    <button onclick="contactArtist('Abstract Artwork 1')">Inquire</button>
+                </div>
+                <div class="artwork-item">
+                    <img src="img/abstract3.jpg" alt="Abstract Artwork 1" onclick="openModal(this)">
+                    <h4>Abstract Artwork 1</h4>
+                    <p><strong>Size:</strong> 80x80 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2200</p>
+                    <button onclick="contactArtist('Abstract Artwork 1')">Inquire</button>
+                </div>
+                <div class="artwork-item">
+                    <img src="img/abstract4.jpg" alt="Abstract Artwork 1" onclick="openModal(this)">
+                    <h4>Abstract Artwork 1</h4>
+                    <p><strong>Size:</strong> 80x80 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2200</p>
+                    <button onclick="contactArtist('Abstract Artwork 1')">Inquire</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="art-section">
+            <div class="artwork-container">
+                <!-- Artwork Items -->
+                <div class="artwork-item">
+                    <img src="img/abstract5.jpg" alt="Abstract Artwork 1" onclick="openModal(this)">
+                    <h4>Abstract Artwork 1</h4>
+                    <p><strong>Size:</strong> 80x80 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2200</p>
+                    <button onclick="contactArtist('Abstract Artwork 1')">Inquire</button>
+                </div>
+                <!-- Repeat other artworks similarly -->
+                <div class="artwork-item">
+                    <img src="img/abstract6.jpg" alt="Abstract Artwork 1" onclick="openModal(this)">
+                    <h4>Abstract Artwork 1</h4>
+                    <p><strong>Size:</strong> 80x80 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2200</p>
+                    <button onclick="contactArtist('Abstract Artwork 1')">Inquire</button>
+                </div>
+                <div class="artwork-item">
+                    <img src="img/abstract7.jpg" alt="Abstract Artwork 1" onclick="openModal(this)">
+                    <h4>Abstract Artwork 1</h4>
+                    <p><strong>Size:</strong> 80x80 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2200</p>
+                    <button onclick="contactArtist('Abstract Artwork 1')">Inquire</button>
+                </div>
+                <div class="artwork-item">
+                    <img src="img/abstract8.jpg" alt="Abstract Artwork 1" onclick="openModal(this)">
+                    <h4>Abstract Artwork 1</h4>
+                    <p><strong>Size:</strong> 80x80 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2200</p>
+                    <button onclick="contactArtist('Abstract Artwork 1')">Inquire</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="art-section">
+            <div class="artwork-container">
+                <!-- Artwork Items -->
+                <div class="artwork-item">
+                    <img src="img/abstract9.jpg" alt="Abstract Artwork 1" onclick="openModal(this)">
+                    <h4>Abstract Artwork 1</h4>
+                    <p><strong>Size:</strong> 80x80 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2200</p>
+                    <button onclick="contactArtist('Abstract Artwork 1')">Inquire</button>
+                </div>
+                <!-- Repeat other artworks similarly -->
+                <div class="artwork-item">
+                    <img src="img/abstract10.jpg" alt="Abstract Artwork 1" onclick="openModal(this)">
+                    <h4>Abstract Artwork 1</h4>
+                    <p><strong>Size:</strong> 80x80 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2200</p>
+                    <button onclick="contactArtist('Abstract Artwork 1')">Inquire</button>
+                </div>
+                <div class="artwork-item">
+                    <img src="img/abstract11.jpg" alt="Abstract Artwork 1" onclick="openModal(this)">
+                    <h4>Abstract Artwork 1</h4>
+                    <p><strong>Size:</strong> 80x80 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2200</p>
+                    <button onclick="contactArtist('Abstract Artwork 1')">Inquire</button>
+                </div>
+                <div class="artwork-item">
+                    <img src="img/abstract12.jpg" alt="Abstract Artwork 1" onclick="openModal(this)">
+                    <h4>Abstract Artwork 1</h4>
+                    <p><strong>Size:</strong> 80x80 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €2200</p>
+                    <button onclick="contactArtist('Abstract Artwork 1')">Inquire</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Buddhism Art Section -->
+        <div class="art-section">
+            <h3>Buddhism Cave Art</h3>
+            <div class="artwork-container">
+                <!-- Artwork Items -->
+                <div class="artwork-item">
+                    <img src="img/ming1.jpg" alt="Buddhism Artwork 1" onclick="openModal(this)">
+                    <h4>Apsara</h4>
+                    <p><strong>Size:</strong> 54x72 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €5200</p>
+                    <button onclick="contactArtist('Buddhism Artwork 1')">Inquire</button>
+                </div>
+                <!-- Repeat other artworks similarly -->
+                <div class="artwork-item">
+                    <img src="img/ming2.jpg" alt="Buddhism Artwork 1" onclick="openModal(this)">
+                    <h4>The temptation of Buddha -Frestelse</h4>
+                    <p><strong>Size:</strong> 81x100 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €5200</p>
+                    <button onclick="contactArtist('Buddhism Artwork 1')">Inquire</button>
+                </div>
+                <div class="artwork-item">
+                    <img src="img/ming3.jpg" alt="Buddhism Artwork 1" onclick="openModal(this)">
+                    <h4>The Adam's - in the beginning</h4>
+                    <p><strong>Size:</strong> 81x100 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €5200</p>
+                    <button onclick="contactArtist('Buddhism Artwork 1')">Inquire</button>
+                </div>
+                <div class="artwork-item">
+                    <img src="img/ming4.jpg" alt="Buddhism Artwork 1" onclick="openModal(this)">
+                    <h4>Predikan - Preaching</h4>
+                    <p><strong>Size:</strong> 81x100 cm</p>
+                    <p><strong>Material:</strong> Oil on Canvas</p>
+                    <p><strong>Price:</strong> €5200</p>
+                    <button onclick="contactArtist('Buddhism Artwork 1')">Inquire</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Modal for Image Zoom -->
+    <div id="imgModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Kaiser A ÖzHun | All Rights Reserved</p>
+       <a style=" display: block; padding: 1rem; color: brown;" href="https://www.astoriafineart.com/artist/317/Adam-Smith"  target="_blank">Astoria Art for sell</a>
+       <p><a href="https://wildwings.com/" style=" display: block; padding: 1rem; color: brown;" target="_blank">Wild wings Art</a></p><p><a href="https://www.martinridley.com" style=" display: block; padding: 1rem; color: brown;" target="_blank">Wild wings Art</a></p>
+       <a href="https://www.paulkenton.com/gallery/" style=" display: block; padding: 1rem; color: brown;" target="_blank" >Paul Kenton</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
