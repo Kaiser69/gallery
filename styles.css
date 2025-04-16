@@ -39,7 +39,7 @@ body > *:not(:last-child) {
 
 .hero-header {
     position: relative;
-    background: url('img/hd1.jpg') center center/cover no-repeat;
+    background: url('img/hd1.JPG') center center/cover no-repeat;
     color: white;
     display: flex;
     align-items: center;
