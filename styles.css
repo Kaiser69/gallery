@@ -5,10 +5,27 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+}
+
+/* Section Spacing */
+section,
+.art-section,
+.hero-header,
+#artwork-list,
+footer {
+    margin-bottom: 10px;
+}
+
+body > *:not(:last-child) {
+    margin-bottom: 10px;
 }
 
 /* Header Styles */
@@ -22,14 +39,14 @@ body {
 
 .hero-header {
     position: relative;
-    height: 80vh;
-    background: url('img/hd1.JPG') center center/cover no-repeat;
+    background: url('img/hd1.jpg') center center/cover no-repeat;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px 20px;
+    padding: 60px 20px;
     text-align: center;
+    flex-direction: column;
 }
 
 .overlay {
@@ -73,6 +90,7 @@ nav a {
     font-weight: bold;
     letter-spacing: 1px;
     text-decoration: none;
+    margin: 0 10px;
 }
 
 nav a:hover {
@@ -81,23 +99,22 @@ nav a:hover {
 
 /* Main Section */
 #artwork-list h2 {
-    font-size: 4em; /* Large font size */
+    font-size: 4em;
     font-weight: bold;
     text-align: center;
     color: #333;
-    margin: 60px 0; /* Add top and bottom margin for spacing */
-    letter-spacing: 2px; /* Slightly spaced letters */
-    text-transform: uppercase; /* Make the text all uppercase */
-    background-image: linear-gradient(to right, #007bff, #00d2ff); /* Gradient background */
-    -webkit-background-clip: text; /* Clip background to text */
+    margin: 60px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #007bff, #00d2ff);
+    -webkit-background-clip: text;
     background-clip: text;
     padding: 10px 0;
-    border-bottom: 3px solid #00d2ff; /* Add a border at the bottom */
-    opacity: 0; /* Start as invisible for animation */
-    animation: fadeInAnimation 1.5s forwards; /* Animation for fade-in */
+    border-bottom: 3px solid #00d2ff;
+    opacity: 0;
+    animation: fadeInAnimation 1.5s forwards;
 }
 
-/* Animation for fading in the heading */
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -109,22 +126,9 @@ nav a:hover {
     }
 }
 
-/* Responsive Adjustments for Smaller Screens */
-@media (max-width: 768px) {
-    #artwork-list h2 {
-        font-size: 2.5em; /* Slightly smaller on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    #artwork-list h2 {
-        font-size: 2em; /* Even smaller for very small screens */
-    }
-}
-
 .art-section {
-    margin: 40px 0;
-    padding: 40px;
+    margin: 60px 0;
+    padding: 40px 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
 }
@@ -226,37 +230,86 @@ footer {
 }
 
 /* Responsive Layouts */
-@media (max-width: 1024px) {
+@media (max-width: 812px) {
     .artwork-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 10px;
     }
-}
-
-@media (max-width: 768px) {
-    .artwork-container {
-        grid-template-columns: 1fr;
+    .artwork-item {
+        padding: 12px;
     }
-
+    .hero-header {
+        padding: 40px 15px;
+        min-height: 50vh;
+        background-position: center center;
+    }
     .header-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
-
     .header-content p {
         font-size: 1rem;
+    }
+    nav a {
+        display: inline-block;
+        margin: 5px 10px;
+        padding: 10px 12px;
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
+    .artwork-container {
+        grid-template-columns: 1fr;
+        padding: 0 8px;
+    }
+    .artwork-item {
+        padding: 10px;
+    }
     #artwork-list h2 {
         font-size: 2em;
     }
-
-    button {
-        padding: 8px 16px;
-    }
-
     .artwork-item h4 {
         font-size: 1em;
     }
+    .hero-header {
+        padding: 30px 10px;
+        min-height: auto;
+    }
+    .header-content h1 {
+        font-size: 1.4rem;
+    }
+    .header-content p {
+        font-size: 0.95rem;
+    }
+    button {
+        padding: 8px 16px;
+    }
 }
 
+@media screen and (max-height: 450px) and (orientation: landscape) {
+    .hero-header {
+        padding: 30px 25px;
+        height: auto;
+    }
+    .header-content h1 {
+        font-size: 1.2rem;
+    }
+    .header-content p {
+        font-size: 0.9rem;
+    }
+    .artwork-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 8px;
+        gap: 10px;
+    }
+    nav a {
+        font-size: 0.85rem;
+        margin: 4px 6px;
+        padding: 8px 10px;
+    }
+    button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
