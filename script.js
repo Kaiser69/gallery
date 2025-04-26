@@ -33,3 +33,21 @@ function closeModal() {
     var modal = document.getElementById("imgModal");
     modal.style.display = "none";   // Hide the modal
 }
+
+
+// Function to collapsible.
+document.querySelectorAll(".collapsible").forEach(btn => {
+    btn.onclick = function() {
+      this.classList.toggle("active");
+      let content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        this.textContent = "More";
+        this.style.color = "green";
+      } else {
+        content.style.display = "block";
+        this.textContent = "Less";
+        this.style.color = "red";
+      }
+    }
+  });
