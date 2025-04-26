@@ -97,6 +97,26 @@ nav a:hover {
     color: #5cd890;
 }
 
+
+.hero {
+    text-align: center;
+    padding: 5rem 1rem;
+    background: #34495e;
+    color: #fff;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+  }
+  
 /* Main Section */
 #artwork-list h2 {
     font-size: 4em;
