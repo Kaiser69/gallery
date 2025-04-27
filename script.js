@@ -46,7 +46,7 @@ document.querySelectorAll(".collapsible").forEach(btn => {
         this.style.color = "green";
       } else {
         content.style.display = "block";
-        this.textContent = "Less";
+        this.textContent = "-- Less --";
         this.style.color = "red";
       }
     }

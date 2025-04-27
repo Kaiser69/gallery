@@ -118,7 +118,7 @@ nav a:hover {
   }
   
 /* Main Section */
-#artwork-list h2 {
+.artworks h2 {
     font-size: 4em;
     font-weight: bold;
     text-align: center;
