@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Artwork Presentation</title>
+
+
+<style>
+    :root {
+        --bg: rgb(5, 71, 85);
+        --text: #f6f6f6;
+        --accent: #c34a36;
+        --font: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: var(--font);
+        background: var(--bg);
+        color: var(--text);
+    }
+
+    /* SAME NAV STYLE */
+    nav {
+        background-color: transparent !important;
+        padding: 12px 0;
+        text-align: center;
+    }
+
+    nav a {
+        color: #f6f6f6;
+        padding: 14px 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: 0.25s ease;
+    }
+
+    nav a:hover {
+        color: #5cd890;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    /* Left column */
+    .image-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0px 14px 26px rgba(0,0,0,0.15);
+    }
+
+    .art-info {
+        margin-top: 15px;
+        background: rgb(233, 233, 233);
+        color: #040404;
+        padding: 18px;
+        border-radius: 6px;
+        box-shadow: 0px 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .art-info h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        color: var(--accent);
+    }
+
+    .art-info p {
+        margin: 5px 0;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* Right column */
+    .text-section h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+        color: var(--accent);
+    }
+
+    .text-section p {
+        line-height: 1.7;
+        font-size: 17px;
+        margin-bottom: 16px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 850px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+        .text-section h1 {
+            margin-top: 20px;
+        }
+    }
+
+    /* GREEN PAGINATION BUTTONS */
+    .page-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem auto;
+      max-width: 1100px;
+      padding: 0 20px;
+    }
+
+    .page-btn {
+        flex: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        padding: 0.8rem 1.2rem;
+        border-radius: 999px;
+        border: 2px solid #009b3a;
+        background: transparent;
+        color: #009b3a;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+
+    .page-btn:hover {
+        background: #caffda;
+        color: #007a2e;
+        border-color: #007a2e;
+    }
+
+    .icon {
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+        .page-nav {
+            flex-direction: column;
+        }
+        .page-btn {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .page-btn .label {
+            display: none;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- UPDATED TRANSPARENT NAV -->
+<nav style="margin-top:40px;">
+    <a href="./index.html">Home</a>
+    <a href="./exhibition.html">Exhibition</a>
+    <a href="./contact.html">Contact</a>
+</nav>
+
+<!-- PAGINATION -->
+<nav class="page-nav" aria-label="Page navigation">
+
+  <a class="page-btn prev" href="./exhibition12.html">
+    <span class="icon">←</span>
+    <span class="label">Previous</span>
+  </a>
+
+  <a class="page-btn next" href="./exhibition14.html">
+    <span class="label">Next</span>
+    <span class="icon">→</span>
+  </a>
+
+</nav>
+
+<script>
+document.addEventListener("keydown", function (event) {
+  const prev = document.querySelector(".page-btn.prev[href]");
+  const next = document.querySelector(".page-btn.next[href]");
+
+  if (event.key === "ArrowLeft" && prev) {
+    window.location.href = prev.getAttribute("href");
+  }
+
+  if (event.key === "ArrowRight" && next) {
+    window.location.href = next.getAttribute("href");
+  }
+});
+</script>
+
+<div class="container">
+
+    <!-- LEFT COLUMN stop -->
+    <div class="image-section">
+        <img src="img/abstract4.jpg" alt="Artwork">
+
+        <div class="art-info">
+            <h3>Inner Continuum / Inner Continuum</h3>
+            <p><strong>Artist:</strong> Kaiser A. ÖzHun</p>
+            <p><strong>Medium:</strong> Oil on Canvas</p>
+            <p><strong>Size:</strong> 100 × 70 cm</p>
+            <p><strong>Year:</strong> 2025</p>
+        </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="text-section">
+        <h1>Inner Continuum</h1>
+        <h2>EN</h2>
+         <p>
+            Inner Continuum explores the layered architecture of the self through interlocking curved forms and boldly contrasting color fields. Teal, ochre, black, and red merge into a rhythmic vertical structure, suggesting memory, emotion, and transformation unfolding within a single being. Shapes overlap like chapters in time, with moments of white illumination opening the composition toward clarity. The textured surfaces evoke traces of experience, while the balanced geometry anchors the work in quiet strength.
+            </p>
+            <p>
+           The result is a contemplative, sculptural abstraction—an inner landscape where identity, intuition, and evolution coexist in continuous motion.
+            </p>
+   <br>
+          <h1>Inner Continuum</h1>
+          <h2>TR</h2>
+
+    <p>
+  Inner Continuum, içsel benliğin katmanlı yapısını birbirine geçen eğrisel biçimler ve güçlü renk alanlarıyla araştırır. Turkuaz, oker, siyah ve kırmızının dikey ritmi; hafıza, duygu ve dönüşümün tek bir varlık içinde nasıl aktığını hissettirir. Üst üste binen şekiller zamanın bölümleri gibi görünürken, beyaz alanlar kompozisyonu aydınlığa açar. Dokulu yüzeyler yaşanmışlık izlerini taşır; dengeli geometrisi ise esere sakin bir güç kazandırır.
+
+    <p>
+    Ortaya çıkan soyut kompozisyon, kimliğin, sezginin ve evrimin sürekli hareket hâlindeki içsel manzarasıdır.
+    </p>
+    </div>
+</div>
+
+</body>
+</html>

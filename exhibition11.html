@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Artwork Presentation</title>
+
+
+<style>
+    :root {
+        --bg: rgb(5, 71, 85);
+        --text: #f6f6f6;
+        --accent: #c34a36;
+        --font: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: var(--font);
+        background: var(--bg);
+        color: var(--text);
+    }
+
+    /* SAME NAV STYLE */
+    nav {
+        background-color: transparent !important;
+        padding: 12px 0;
+        text-align: center;
+    }
+
+    nav a {
+        color: #f6f6f6;
+        padding: 14px 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: 0.25s ease;
+    }
+
+    nav a:hover {
+        color: #5cd890;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    /* Left column */
+    .image-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0px 14px 26px rgba(0,0,0,0.15);
+    }
+
+    .art-info {
+        margin-top: 15px;
+        background: rgb(233, 233, 233);
+        color: #040404;
+        padding: 18px;
+        border-radius: 6px;
+        box-shadow: 0px 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .art-info h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        color: var(--accent);
+    }
+
+    .art-info p {
+        margin: 5px 0;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* Right column */
+    .text-section h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+        color: var(--accent);
+    }
+
+    .text-section p {
+        line-height: 1.7;
+        font-size: 17px;
+        margin-bottom: 16px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 850px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+        .text-section h1 {
+            margin-top: 20px;
+        }
+    }
+
+    /* GREEN PAGINATION BUTTONS */
+    .page-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem auto;
+      max-width: 1100px;
+      padding: 0 20px;
+    }
+
+    .page-btn {
+        flex: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        padding: 0.8rem 1.2rem;
+        border-radius: 999px;
+        border: 2px solid #009b3a;
+        background: transparent;
+        color: #009b3a;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+
+    .page-btn:hover {
+        background: #caffda;
+        color: #007a2e;
+        border-color: #007a2e;
+    }
+
+    .icon {
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+        .page-nav {
+            flex-direction: column;
+        }
+        .page-btn {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .page-btn .label {
+            display: none;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- UPDATED TRANSPARENT NAV -->
+<nav style="margin-top:40px;">
+    <a href="./index.html">Home</a>
+    <a href="./exhibition.html">Exhibition</a>
+    <a href="./contact.html">Contact</a>
+</nav>
+
+<!-- PAGINATION -->
+<nav class="page-nav" aria-label="Page navigation">
+
+  <a class="page-btn prev" href="./exhibition10.html">
+    <span class="icon">←</span>
+    <span class="label">Previous</span>
+  </a>
+
+  <a class="page-btn next" href="./exhibition12.html">
+    <span class="label">Next</span>
+    <span class="icon">→</span>
+  </a>
+
+</nav>
+
+<script>
+document.addEventListener("keydown", function (event) {
+  const prev = document.querySelector(".page-btn.prev[href]");
+  const next = document.querySelector(".page-btn.next[href]");
+
+  if (event.key === "ArrowLeft" && prev) {
+    window.location.href = prev.getAttribute("href");
+  }
+
+  if (event.key === "ArrowRight" && next) {
+    window.location.href = next.getAttribute("href");
+  }
+});
+</script>
+
+<div class="container">
+
+    <!-- LEFT COLUMN stop -->
+    <div class="image-section">
+        <img src="img/abstract2.jpg" alt="Artwork">
+
+        <div class="art-info">
+            <h3>Fragile Light/ Fragile Light</h3>
+            <p><strong>Artist:</strong> Kaiser A. ÖzHun</p>
+            <p><strong>Medium:</strong> Oil on Canvas</p>
+            <p><strong>Size:</strong> 100 × 70 cm</p>
+            <p><strong>Year:</strong> 2025</p>
+        </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="text-section">
+        <h1>Fragile Light</h1>
+        <h2>EN</h2>
+         <p>
+             Fragile Light explores life as a delicate, luminous structure suspended within darkness. Stacked glass-like squares glow with molten reds, ember oranges, and cool crystalline blues—each plane reflecting a different emotional state. Their transparency suggests vulnerability, while their geometry provides order and strength. The dark surrounding space heightens the inner radiance, making each illuminated square feel like a fragile moment of existence held together by balance and tension.
+            </p>
+            <p>
+           The composition becomes a meditation on sensitivity, resilience, and the quiet brilliance that emerges when light survives the shadows.
+            </p>
+   <br>
+          <h1>Fragile Light</h1>
+          <h2>TR</h2>
+
+    <p>
+   Fragile Light, karanlığın içinde asılı duran hassas ve ışıklı bir yaşam yapısını araştırır. Cam benzeri karelerin üst üste dizilimi; eriyik kırmızılar, kızıl turuncular ve kristal mavilerle parlayarak farklı duygu hâllerini yansıtır. Şeffaf yüzeyler kırılganlığı ima ederken, geometrik düzen dayanıklılık ve denge hissi yaratır. Çevresindeki koyu alan, içteki ışıltıyı daha da belirginleştirir; her parlak kareyi varoluşun hassas ama dirençli bir anı gibi sunar.
+    </p>
+
+    <p>
+    Kompozisyon, duyarlılık, dayanıklılık ve gölgeler arasında hayatta kalan ışığın sessiz ihtişamına dair bir meditasyona dönüşür.
+    </p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kaiser A. ÖzHun — Geometry of the Soul</title>
+
+<style>
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  line-height: 1.6;
+  color: #111;
+
+  /* ABSTRACT BACKGROUND */
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(255,200,150,0.20) 0%, transparent 60%),
+    radial-gradient(circle at 80% 10%, rgba(130,180,255,0.20) 0%, transparent 70%),
+    radial-gradient(circle at 50% 80%, rgba(200,255,220,0.20) 0%, transparent 65%),
+    #f2f2f3;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+/* Navigation Bar */
+nav {
+    background-color: transparent; /* removed dark background */
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #333; /* darker text since no dark bg */
+    padding: 14px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: #5cd890; /* green hover */
+}
+
+
+/* TWO COLUMNS — EQUAL SIZE */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* LEFT COLUMN */
+.left-column {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.portrait {
+  width: 60%;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  object-fit: cover;
+  display: block;
+}
+
+.artist-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.artist-location {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.artist-tagline {
+  margin: 6px 0 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.series-text {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.series-text p + p {
+  margin-top: 0.6rem;
+}
+
+/* RIGHT COLUMN */
+.right-column {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.right-column h2 {
+  margin-top: 1.2rem;
+  font-size: 1.25rem;
+}
+
+.right-column p + p {
+  margin-top: 0.7rem;
+}
+
+.text-block {
+  margin-bottom: 2rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+/* MOBILE */
+@media (max-width: 820px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+  .right-column {
+    max-height: unset;
+  }
+  .portrait {
+    width: 60%;
+  }
+}
+
+/* ----------------------------- */
+/*    GREEN SHOCKER ARROWS       */
+/* ----------------------------- */
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+/* Green transparent buttons */
+.page-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  border: 2px solid #009b3a;   /* green outline */
+  background: transparent;     /* no background */
+  color: #009b3a;              /* green text */
+
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Hover = light green background + darker green text */
+.page-btn:hover {
+  background: #caffda;         /* light green */
+  color: #007a2e;              /* darker green */
+  border-color: #007a2e;
+}
+
+.page-btn[aria-disabled="true"] {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+/* Mobile: stack arrows */
+@media (max-width: 600px) {
+  .page-nav {
+    flex-direction: column;
+  }
+}
+
+/* Extra small screens: hide labels */
+@media (max-width: 360px) {
+  .page-btn .label {
+    display: none;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Navigation Bar -->
+   <nav style="margin-top:20px;">
+        <a href="./index.html">Home</a>
+        <a href="./exhibition.html">Exhibition</a>
+        <a href="./contact.html">Contact</a>
+    </nav>
+
+</div>
+
+<!-- Pagination (green arrows integrated here) -->
+<nav class="page-nav" aria-label="Page navigation">
+
+  <a class="page-btn prev" href="./index.html">
+    <span class="icon">←</span>
+    <span class="label">Previous</span>
+  </a>
+
+  <a class="page-btn next" href="./exhibition1.html">
+    <span class="label">Next</span>
+    <span class="icon">→</span>
+  </a>
+
+</nav>
+
+<script>
+  // Keyboard navigation: Left / Right arrows
+  document.addEventListener("keydown", function (event) {
+    const prev = document.querySelector(".page-btn.prev[href]");
+    const next = document.querySelector(".page-btn.next[href]");
+
+    if (event.key === "ArrowLeft" && prev) {
+      window.location.href = prev.getAttribute("href");
+    }
+
+    if (event.key === "ArrowRight" && next) {
+      window.location.href = next.getAttribute("href");
+    }
+  });
+</script>
+
+<div class="container">
+
+  <div class="columns">
+
+    <!-- LEFT COLUMN -->
+    <div class="left-column">
+      <img src="img/me.jpg" alt="Portrait of Kaiser A. ÖzHun" class="portrait" />
+
+      <h2 class="artist-name">Kaiser A ÖzHun</h2>
+      <p class="artist-location">Lund, Sweden</p>
+      <p class="artist-tagline">Accomplished Artist Bridging Traditional and Contemporary Practices</p>
+
+      <div class="series-text">
+        <p>
+          Kaiser A. ÖzHun’s geometric abstractions emerge from a search for clarity,
+          balance and inner resonance. His shapes—arcs, spheres, vessels and ascending
+          forms—function as symbols of interior movement, suggesting transitions,
+          thresholds and quiet states of awareness.
+        </p>
+        <p>
+          Rather than depicting external subjects, these paintings explore the
+          choreography of perception itself. Color becomes atmosphere: soft gradients,
+          glowing contrasts and measured tones form spaces that feel meditative,
+          weightless and psychologically open.
+        </p>
+        <p>
+          Together, the works form a visual path through stillness and intensity,
+          mapping how geometry can hold emotion, memory and spiritual presence in a
+          contemporary abstract language.
+        </p>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-column">
+
+      <!-- English exhibition text -->
+      <section class="text-block">
+        <h2>Exhibition Introduction (English)</h2>
+        <p>
+          <strong>Kaiser A. ÖzHun — Geometry of the Soul</strong> presents a body of
+          work where classical art training expands into a contemporary geometric
+          language. Educated through rigorous studio programs in China and Europe—
+          including Renaissance-based MFA studies and a Master’s in East Asian Art—
+          ÖzHun enters abstraction with rare discipline and refinement.
+        </p>
+        <p>
+          These paintings mark a shift from figuration and historical research toward
+          a modern, intuitive visual form. Pigmented surfaces, subtle textures and
+          balanced color fields create compositions that feel both architectural and
+          emotional. Curves, lines and chromatic spaces move with the rhythm of
+          thought, forming quiet, meditative environments.
+        </p>
+        <p>
+          Through this evolving abstract vocabulary, ÖzHun redefines his artistic
+          voice and invites viewers into the unfolding geometry of the human spirit.
+        </p>
+      </section>
+
+      <!-- Turkish exhibition text -->
+      <section class="text-block">
+        <h2>Sergi Giriş Metni (Türkçe)</h2>
+        <p>
+          <strong>Kaiser A. ÖzHun — Ruhun Geometrisi</strong>, klasik sanat
+          eğitiminin çağdaş geometrik soyuta dönüşümünü sunar. Çin ve Avrupa’daki
+          akademik eğitim, Rönesans temelli MFA ve Doğu Asya Sanatı yüksek lisansı,
+          sanatçıya disiplinli ve derinlikli bir yaklaşım kazandırmıştır.
+        </p>
+        <p>
+          Bu resimler, figürasyon ve tarihsel araştırmadan sezgisel ve modern bir
+          dile geçişin göstergesidir. Zengin pigmentler, ince dokular ve dengeli renk
+          alanları hem mimari hem duygusal bir atmosfer oluşturur. Eğriler, çizgiler
+          ve renk kütleleri düşüncenin ritmiyle hareket ederek dingin, meditasyon
+          benzeri alanlar yaratır.
+        </p>
+        <p>
+          ÖzHun, bu gelişen soyut dil ile sanatçı kimliğini yeniden tanımlar ve
+          izleyiciyi insan ruhunun geometrisine davet eder.
+        </p>
+      </section>
+
+    </div>
+
+  </div>
+  
+</div>
+
+<footer>
+  © <script>document.write(new Date().getFullYear());</script> Kaiser A. ÖzHun · Lund, Sweden
+</footer>
+
+</body>
+</html>
