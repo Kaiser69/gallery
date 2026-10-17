@@ -1,355 +1,547 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Art Portfolio - Kaiser A ÖzHun</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- Header Section -->
     <header class="hero-header">
-        <div class="overlay"></div>
-        <div class="header-content animated-header">
-            <div class="artist-avatar">
-                <img src="img/arts.jpg" alt="Kaiser A ÖzHun" class="u-avatar" />
-            </div>
-
-            <h1>Kaiser A ÖzHun</h1>
-            <p style="color: turquoise;">Lund Sweden</p>
-            <p style="color: orange;"><strong>Accomplished Artist Bridging Traditional and Contemporary Practices</strong></p>
-            <p>
-                Kaiser A. ÖzHun is a multidisciplinary artist and researcher whose practice is shaped by sustained international exhibition experience and rigorous art-historical scholarship. Active since 1994, he has exhibited extensively across Asia and Europe, including China, Hong Kong, Japan, Malaysia, England, and Sweden. His works are represented in professional private art collections.</p>
-
-                     <style>
-                    .collapsible {
-                      color: green; cursor: pointer;
-                      padding: 18px; width: 100%; border: none; text-align: left;
-                    }
-                    
-                    .content {
-                      padding: 0 18px; display: none; overflow: hidden; 
-                    }
-                    </style>
-                    
-                    <a class="collapsible">More...</a>
-                    <div class="content">
-                        <p>His academic formation includes classical fine art training in China, an MFA grounded in Renaissance painting techniques, and a Master’s degree in East Asian Art from Sotheby’s Institute of Art. This combined studio and scholarly background underpins a practice that bridges historical visual systems with contemporary methodologies.
-                        </p>
-                        <p>
-                            ÖzHun’s research centers on Buddhist cave art of the Tarim Basin—particularly Kizil, Khotan, and Turfan—approached as transregional sites of cultural exchange linking Central Asia, China, Korea, and Japan. Working across oil painting, ink, drawing, and AI-assisted processes, he investigates abstraction as a historically continuous visual language.
-                        </p>
-
-                        <p>
-                            His geometric oil paintings employ circles, arcs, and angular forms to establish rhythmic structures that balance precision and emotional resonance, proposing abstraction as a space where historical memory and spiritual perception converge.
-                        </p>
-                    </div>
+      <div class="overlay"></div>
+      <div class="header-content animated-header">
+        <div class="artist-avatar">
+          <img src="img/arts.jpg" alt="Kaiser A ÖzHun" class="u-avatar" />
         </div>
+
+        <h1>Kaiser A ÖzHun</h1>
+        <p style="color: turquoise">Lund Sweden</p>
+        <p style="color: orange">
+          <strong
+            >Accomplished Artist Bridging Traditional and Contemporary
+            Practices</strong
+          >
+        </p>
+        <p>
+          Kaiser A. ÖzHun is a multidisciplinary artist and researcher whose
+          practice is shaped by sustained international exhibition experience
+          and rigorous art-historical scholarship. Active since 1994, he has
+          exhibited extensively across Asia and Europe, including China, Hong
+          Kong, Japan, Malaysia, England, and Sweden. His works are represented
+          in professional private art collections.
+        </p>
+
+        <style>
+          .collapsible {
+            color: green;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+          }
+
+          .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+          }
+        </style>
+
+        <a class="collapsible">More...</a>
+        <div class="content">
+          <p>
+            His academic formation includes classical fine art training in
+            China, an MFA grounded in Renaissance painting techniques, and a
+            Master’s degree in East Asian Art from Sotheby’s Institute of Art.
+            This combined studio and scholarly background underpins a practice
+            that bridges historical visual systems with contemporary
+            methodologies.
+          </p>
+          <p>
+            ÖzHun’s research centers on Buddhist cave art of the Tarim
+            Basin—particularly Kizil, Khotan, and Turfan—approached as
+            transregional sites of cultural exchange linking Central Asia,
+            China, Korea, and Japan. Working across oil painting, ink, drawing,
+            and AI-assisted processes, he investigates abstraction as a
+            historically continuous visual language.
+          </p>
+
+          <p>
+            His geometric oil paintings employ circles, arcs, and angular forms
+            to establish rhythmic structures that balance precision and
+            emotional resonance, proposing abstraction as a space where
+            historical memory and spiritual perception converge.
+          </p>
+        </div>
+      </div>
     </header>
 
     <!-- Navigation Bar -->
     <nav>
-        <a href="./index.html">Home</a>
-        <a href="./exhibition.html">Exhibition</a>
-         <a href="./contact.html">Contact</a>
+      <a href="./index.html">Home</a>
+      <a href="./exhibition.html">Exhibition</a>
+      <a href="./contact.html">Contact</a>
     </nav>
 
     <!-- Main Section with 4-Column Layout for Artworks -->
     <section class="artworks" id="artwork-list">
-        <h2 >Featured Artworks</h2>
+      <h2>Featured Artworks</h2>
 
-        <!-- Realistic Classic Art Section -->
-
-        <section id="home" class="hero">
-            <h1 >Classic University Style – Oil Painting</h1>
-            <p>ÖzHun’s training follows a classical university model of painting education, emphasizing Renaissance methodology, including draftsmanship, anatomical study, linear perspective, and chiaroscuro. Traditional oil painting techniques such as underpainting and glazing form the technical foundation of his practice.</p>
-          </section>
-        <div class="art-section">
-            <h3>Realistic Classic Art</h3>
-            <div class="artwork-container">
-                <!-- Artwork Items -->
-                <div class="artwork-item">
-                    <img src="img/hund.jpg" alt="Before the Night Falls" onclick="openModal(this)">
-                    <h4>Last Light</h4>
-                    <p><strong>Size:</strong> 70 x 100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> 78,000 SEK</p>
-                    <button style="color: red;" onclick="contactArtist('The Storm')">Enquire</button>
-                </div>
-                <!-- Repeat other artworks similarly -->
-                <div class="artwork-item">
-                    <img src="img/tajik.png" alt="The Storm " onclick="openModal(this)">
-                    <h4>Kashgar - Tajik</h4>
-                    <p><strong>Size:</strong> 70x 90cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> <A style="color: red;">SOLD</A>  </p>
-                    <button style="color: red;" onclick="contactArtist('The Storm')">Enquire</button>
-                </div>
-                <div class="artwork-item">
-                    <img src="img/lands.jpg" alt="Autumn Reverie" onclick="openModal(this)">
-                    <h4>Autumn Reverie</h4>
-                    <p><strong>Size:</strong> 70 x 90cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> 68,000SEK</p>
-                    <button style="color: red; font-weight: bold;" onclick="contactArtist('Autumn Reverie')">Enquire</button>
-                </div>
-                <div class="artwork-item">
-                    <img src="img/bugh.png" alt="Monarch of the Mountain Pass" onclick="openModal(this)">
-                    <h4>Monarch of the Mountain Pass</h4>
-                    <p><strong>Size:</strong> 81cm × 100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> 126,000 SEK</p>
-                    <button style="color: red;" onclick="contactArtist('Springtime')">Enquire</button>
-                </div>
-            </div>
+      <!-- Abstract Art Section -->
+      <section id="home" class="hero">
+        <h1>Geometric Abstract Modern – Oil Painting</h1>
+        <p>
+          This body of work explores a dialogue between geometric precision and
+          painterly sensibility. Dense oil pigments generate depth and surface
+          variation, allowing crisp structural forms to coexist with subtle,
+          expressive mark-making. The compositions unfold as rhythmic systems of
+          color, form, and spatial tension.
+        </p>
+      </section>
+      <div class="art-section">
+        <h3>Modern Abstract Art</h3>
+        <br>
+          
+        <div class="artwork-container">
+          <!-- Artwork Items -->
+          <div class="artwork-item">
+            <img
+              src="img/abstract5.jpg"
+              alt="Celestial Syntax"
+              onclick="openModal(this)"
+            />
+            <h4>Celestial Syntax</h4>
+            <p><strong>Size:</strong> 70x100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 56,000 SEK</p>
+            <button onclick="contactArtist('Celestial Syntax')">Inquire</button>
+          </div>
+          <!-- Repeat other artworks similarly -->
+          <div class="artwork-item">
+            <img
+              src="img/abstract8.jpg"
+              alt="Echoes of the Tropics"
+              onclick="openModal(this)"
+            />
+            <h4>Echoes of the Tropics</h4>
+            <p><strong>Size:</strong> 70x100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 49,000 SEK</p>
+            <button href="./exhibition1.html">Inquire</button>
+          </div>
+          <div class="artwork-item">
+            <img
+              src="img/abstract7.jpg"
+              alt="Celestial Choreography"
+              onclick="openModal(this)"
+            />
+            <h4>Celestial Choreography</h4>
+            <p><strong>Size:</strong> 70x100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 49,000 SEK</p>
+            <button onclick="contactArtist('Celestial Choreography')">
+              Inquire
+            </button>
+          </div>
+          <div class="artwork-item">
+            <img
+              src="img/abstract6.jpg"
+              alt="Symphony in Form "
+              onclick="openModal(this)"
+            />
+            <h4>Symphony in Form</h4>
+            <p><strong>Size:</strong> 70x100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 58,000 SEK</p>
+            <button onclick="contactArtist('Symphony in Form and Color')">
+              Inquire
+            </button>
+          </div>
         </div>
+      </div>
 
-        <!-- Abstract Art Section -->
-        <section id="home" class="hero">
-            <h1 >Geometric Abstract Modern – Oil Painting</h1>
-            <p>This body of work explores a dialogue between geometric precision and painterly sensibility. Dense oil pigments generate depth and surface variation, allowing crisp structural forms to coexist with subtle, expressive mark-making. The compositions unfold as rhythmic systems of color, form, and spatial tension.</p>
-          </section>
-        <div class="art-section">
-            <h3>Modern Abstract Art</h3>
-            <div class="artwork-container">
-                <!-- Artwork Items -->
-                <div class="artwork-item">
-                    <img src="img/abstract5.jpg" alt="Celestial Syntax" onclick="openModal(this)">
-                    <h4>Celestial Syntax</h4>
-                    <p><strong>Size:</strong> 70x100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €Enquire Now</p>
-                    <button onclick="contactArtist('Celestial Syntax')">Inquire</button>
-                </div>
-                <!-- Repeat other artworks similarly -->
-                <div class="artwork-item">
-                    <img src="img/abstract8.jpg" alt="Echoes of the Tropics" onclick="openModal(this)">
-                    <h4>Echoes of the Tropics</h4>
-                    <p><strong>Size:</strong> 70x100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €Enquire Now</p>
-                    <button href="./exhibition1.html">Inquire</button>
-                </div>
-                <div class="artwork-item">
-                    <img src="img/abstract7.jpg" alt="Celestial Choreography" onclick="openModal(this)">
-                    <h4>Celestial Choreography</h4>
-                    <p><strong>Size:</strong> 70x100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €Enquire Now</p>
-                    <button onclick="contactArtist('Celestial Choreography')">Inquire</button>
-                </div>
-                <div class="artwork-item">
-                    <img src="img/abstract6.jpg" alt="Symphony in Form " onclick="openModal(this)">
-                    <h4>Symphony in Form </h4>
-                    <p><strong>Size:</strong> 70x100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €Enquire Now</p>
-                    <button onclick="contactArtist('Symphony in Form and Color')">Inquire</button>
-                </div>
-                
-            </div>
+      <!-- Artwork Items -->
+      <div class="art-section">
+        <div class="artwork-container">
+          <div class="artwork-item">
+            <img
+              src="img/abstract9.jpg"
+              alt="Kamon Geometry"
+              onclick="openModal(this)"
+            />
+            <h4>Kamon Geometry</h4>
+            <p><strong>Size:</strong> 70x100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 52,000 SEK</p>
+            <button onclick="contactArtist('Kamon Geometry')">Inquire</button>
+          </div>
+          <!-- Repeat other artworks similarly -->
+          <div class="artwork-item">
+            <img
+              src="img/abstract20.jpg"
+              alt="Cyber Samurai"
+              onclick="openModal(this)"
+            />
+            <h4>Cyber Samurai</h4>
+            <p><strong>Size:</strong> 70x100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 53,000 SEK</p>
+            <button onclick="contactArtist('Cyber Samurai')">Inquire</button>
+          </div>
+          <div class="artwork-item">
+            <img
+              src="img/abstract11.jpg"
+              alt="Wheel of Life"
+              onclick="openModal(this)"
+            />
+            <h4>Wheel of Life</h4>
+            <p><strong>Size:</strong> 70x100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 49,000 SEK</p>
+            <button onclick="contactArtist('Wheel of Life')">Inquire</button>
+          </div>
+          <div class="artwork-item">
+            <img
+              src="img/abstract12.jpg"
+              alt="Sound in Shape"
+              onclick="openModal(this)"
+            />
+            <h4>Sound in Shape</h4>
+            <p><strong>Size:</strong> 70x105cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 58,000 SEK</p>
+            <button onclick="contactArtist('Sound in Shape')">Inquire</button>
+          </div>
         </div>
+      </div>
 
- <!-- Artwork Items -->
-        <div class="art-section">
-            <div class="artwork-container">
-               
-                <div class="artwork-item">
-                    <img src="img/abstract9.jpg" alt="Kamon Geometry" onclick="openModal(this)">
-                    <h4>Kamon Geometry</h4>
-                    <p><strong>Size:</strong> 70x100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €Enquire Now</p>
-                    <button onclick="contactArtist('Kamon Geometry')">Inquire</button>
-                </div>
-                <!-- Repeat other artworks similarly -->
-                 <div class="artwork-item">
-                    <img src="img/abstract20.jpg" alt="Cyber Samurai" onclick="openModal(this)">
-                    <h4>Cyber Samurai</h4>
-                    <p><strong>Size:</strong> 70x100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €Enquire Now</p>
-                    <button onclick="contactArtist('Cyber Samurai')">Inquire</button>
-                </div>
-                <div class="artwork-item">
-                    <img src="img/abstract11.jpg" alt="Wheel of Life" onclick="openModal(this)">
-                    <h4>Wheel of Life</h4>
-                    <p><strong>Size:</strong> 70x100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €Enquire Now</p>
-                    <button onclick="contactArtist('Wheel of Life')">Inquire</button>
-                </div>
-                <div class="artwork-item">
-                    <img src="img/abstract12.jpg" alt="Sound in Shape" onclick="openModal(this)">
-                    <h4>Sound in Shape</h4>
-                    <p><strong>Size:</strong> 70x105cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €Enquire Now</p>
-                    <button onclick="contactArtist('Sound in Shape')">Inquire</button>
-                </div>
-                
-            </div>
-        </div>
+      <!--end -->
 
-        <!--end -->
-
-
- <!-- Artwork Items -->
- <div class="art-section">
-    <div class="artwork-container">
-       
-        <div class="artwork-item">
-            <img src="img/abstract22.jpg" alt="Spirit Vessel" onclick="openModal(this)">
+      <!-- Artwork Items -->
+      <div class="art-section">
+        <div class="artwork-container">
+          <div class="artwork-item">
+            <img
+              src="img/abstract22.jpg"
+              alt="Spirit Vessel"
+              onclick="openModal(this)"
+            />
             <h4>Spirit Vessel</h4>
             <p><strong>Size:</strong> 70x100cm</p>
             <p><strong>Material:</strong> Oil on Canvas</p>
-            <p><strong>Price:</strong> €Enquire Now</p>
+            <p><strong>Price:</strong> 54,000 SEK</p>
             <button onclick="contactArtist('Spirit Vessel')">Inquire</button>
-        </div>
-        <!-- Repeat other artworks similarly -->
-        <div class="artwork-item">
-            <img src="img/abstract24.jpg" alt="Future Monoliths" onclick="openModal(this)">
+          </div>
+          <!-- Repeat other artworks similarly -->
+          <div class="artwork-item">
+            <img
+              src="img/abstract24.jpg"
+              alt="Future Monoliths"
+              onclick="openModal(this)"
+            />
             <h4>Future Monoliths</h4>
             <p><strong>Size:</strong> 70x100cm</p>
             <p><strong>Material:</strong> Oil on Canvas</p>
-            <p><strong>Price:</strong> €Enquire Now</p>
+            <p><strong>Price:</strong> 49,000 SEK</p>
             <button onclick="contactArtist('Future Monoliths')">Inquire</button>
-        </div>
-        <div class="artwork-item">
-            <img src="img/abstract23.jpg" alt="The Blessing Sphere" onclick="openModal(this)">
+          </div>
+          <div class="artwork-item">
+            <img
+              src="img/abstract23.jpg"
+              alt="The Blessing Sphere"
+              onclick="openModal(this)"
+            />
             <h4>The Blessing Sphere</h4>
             <p><strong>Size:</strong> 70x100cm</p>
             <p><strong>Material:</strong> Oil on Canvas</p>
-            <p><strong>Price:</strong> €Enquire Now</p>
-            <button onclick="contactArtist('The Blessing Sphere')">Inquire</button>
-        </div>
-        <div class="artwork-item">
-            <img src="img/abstract21.jpg" alt="Golden Pathways" onclick="openModal(this)">
+            <p><strong>Price:</strong>49,000 SEK</p>
+            <button onclick="contactArtist('The Blessing Sphere')">
+              Inquire
+            </button>
+          </div>
+          <div class="artwork-item">
+            <img
+              src="img/abstract21.jpg"
+              alt="Golden Pathways"
+              onclick="openModal(this)"
+            />
             <h4>Golden Pathways</h4>
             <p><strong>Size:</strong> 70x100cm</p>
             <p><strong>Material:</strong> Oil on Canvas</p>
-            <p><strong>Price:</strong> €Enquire Now</p>
+            <p><strong>Price:</strong> 49,000 SEK</p>
             <button onclick="contactArtist('Golden Pathways')">Inquire</button>
+          </div>
         </div>
-        
-    </div>
-</div>
+      </div>
 
-<!--end -->
-    
+      <!--end -->
 
-
-        <div class="art-section">
-            <h3>Modern Abstract Art</h3>
-            <div class="artwork-container">
-                <!-- Artwork Items -->
-                <div class="artwork-item">
-                    <img src="img/abstract1.jpg" alt="Celestial Lale" onclick="openModal(this)">
-                    <h4>Celestial Lale</h4>
-                    <p><strong>Size:</strong> 70x100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €Enquire Now</p>
-                    <button onclick="contactArtist('Celestial Lale')">Inquire</button>
-                </div>
-                <!-- Repeat other artworks similarly -->
-                <div class="artwork-item">
-                    <img src="img/abstract2.jpg" alt="Fragile Light" onclick="openModal(this)">
-                    <h4>Fragile Light</h4>
-                    <p><strong>Size:</strong> 70x100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €Enquire Now</p>
-                    <button onclick="contactArtist('Fragile Light')">Inquire</button>
-                </div>
-                <div class="artwork-item">
-                    <img src="img/abstract3.jpg" alt="Path of Glass" onclick="openModal(this)">
-                    <h4>Path of Glass</h4>
-                    <p><strong>Size:</strong> 70x100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €Enquire Now</p>
-                    <button onclick="contactArtist('Path of Glass')">Inquire</button>
-                </div>
-                <div class="artwork-item">
-                    <img src="img/abstract4.jpg" alt="Inner Continuum" onclick="openModal(this)">
-                    <h4>Inner Continuum</h4>
-                    <p><strong>Size:</strong>70x100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €Enquire Now</p>
-                    <button onclick="contactArtist('Inner Continuum')">Inquire</button>
-                </div>
-                
-            </div>
+      <div class="art-section">
+        <div class="artwork-container">
+          <!-- Artwork Items -->
+          <div class="artwork-item">
+            <img
+              src="img/abstract1.jpg"
+              alt="Celestial Lale"
+              onclick="openModal(this)"
+            />
+            <h4>Celestial Lale</h4>
+            <p><strong>Size:</strong> 70x100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 48,000 SEK</p>
+            <button onclick="contactArtist('Celestial Lale')">Inquire</button>
+          </div>
+          <!-- Repeat other artworks similarly -->
+          <div class="artwork-item">
+            <img
+              src="img/abstract2.jpg"
+              alt="Fragile Light"
+              onclick="openModal(this)"
+            />
+            <h4>Fragile Light</h4>
+            <p><strong>Size:</strong> 70x100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 51,000 SEK</p>
+            <button onclick="contactArtist('Fragile Light')">Inquire</button>
+          </div>
+          <div class="artwork-item">
+            <img
+              src="img/abstract3.jpg"
+              alt="Path of Glass"
+              onclick="openModal(this)"
+            />
+            <h4>Path of Glass</h4>
+            <p><strong>Size:</strong> 70x100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 48,000 SEK</p>
+            <button onclick="contactArtist('Path of Glass')">Inquire</button>
+          </div>
+          <div class="artwork-item">
+            <img
+              src="img/abstract4.jpg"
+              alt="Inner Continuum"
+              onclick="openModal(this)"
+            />
+            <h4>Inner Continuum</h4>
+            <p><strong>Size:</strong>70x100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 48,000 SEK</p>
+            <button onclick="contactArtist('Inner Continuum')">Inquire</button>
+          </div>
         </div>
-        <!-- Buddhism Art Section -->
-        <section id="home" class="hero">
-            <h1>Buddhism Cave Art</h1>
-            <p>
-              This work constitutes a research-based visual interpretation informed by the spiritual and artistic heritage of early Buddhist traditions along the Silk Road. It engages historically with mural painting practices while reframing them through contemporary material and pictorial methods.</p>
-                <p>
-                    The Kizil Caves, situated along the northern bank of the Muzart River in Kösen (ancient Qiuci), Xinjiang, represent some of the earliest and most significant surviving examples of Buddhist cave art in Central Asia.
-                </p>
-          </section>
-        <div class="art-section">
-            <h3>Buddhism Cave Art</h3>
-            <div class="artwork-container">
-                <!-- Artwork Items -->
-                <div class="artwork-item">
-                    <img src="img/ming1.jpg" alt="Buddhism Artwork 1" onclick="openModal(this)">
-                    <h4>Apsara</h4>
-                    <p><strong>Size:</strong> 54x72cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €5,200</p>
-                    <button onclick="contactArtist('Buddhism Artwork 1')">Inquire</button>
-                </div>
-                <!-- Repeat other artworks similarly -->
-                <div class="artwork-item">
-                    <img src="img/ming2.jpg" alt="Buddhism Artwork 1" onclick="openModal(this)">
-                    <h4>The temptation of Buddha -Frestelse</h4>
-                    <p><strong>Size:</strong> 81x100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €5,200</p>
-                    <button onclick="contactArtist('Buddhism Artwork 1')">Inquire</button>
-                </div>
-                <div class="artwork-item">
-                    <img src="img/ming3.jpg" alt="Buddhism Artwork 1" onclick="openModal(this)">
-                    <h4>The Adam's - in the beginning</h4>
-                    <p><strong>Size:</strong> 81x100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €5,200</p>
-                    <button onclick="contactArtist('Buddhism Artwork 1')">Inquire</button>
-                </div>
-                <div class="artwork-item">
-                    <img src="img/ming4.jpg" alt="Buddhism Artwork 1" onclick="openModal(this)">
-                    <h4>Predikan - Preaching</h4>
-                    <p><strong>Size:</strong> 81x100cm</p>
-                    <p><strong>Material:</strong> Oil on Canvas</p>
-                    <p><strong>Price:</strong> €5,200</p>
-                    <button onclick="contactArtist('Buddhism Artwork 1')">Inquire</button>
-                </div>
-            </div>
-        </div>
+      </div>
 
+
+      <!-- Realistic Classic Art Section -->
+
+      <section id="home" class="hero">
+        <h1>Classic University Style – Oil Painting</h1>
+        <p>
+          ÖzHun’s training follows a classical university model of painting
+          education, emphasizing Renaissance methodology, including
+          draftsmanship, anatomical study, linear perspective, and chiaroscuro.
+          Traditional oil painting techniques such as underpainting and glazing
+          form the technical foundation of his practice.
+        </p>
+      </section>
+      <div class="art-section">
+        <h3>Realistic Classic Art</h3>
+        <div class="artwork-container">
+          <!-- Artwork Items -->
+          <div class="artwork-item">
+            <img
+              src="img/hund.jpg"
+              alt="Before the Night Falls"
+              onclick="openModal(this)"
+            />
+            <h4>Last Light</h4>
+            <p><strong>Size:</strong> 70 x 100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 78,000 SEK</p>
+            <button style="color: red" onclick="contactArtist('The Storm')">
+              Enquire
+            </button>
+          </div>
+          <!-- Repeat other artworks similarly -->
+          <div class="artwork-item">
+            <img
+              src="img/tajik.png"
+              alt="The Storm "
+              onclick="openModal(this)"
+            />
+            <h4>Kashgar - Tajik</h4>
+            <p><strong>Size:</strong> 70x 90cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> <a style="color: red">SOLD</a></p>
+            <button style="color: red" onclick="contactArtist('The Storm')">
+              Enquire
+            </button>
+          </div>
+          <div class="artwork-item">
+            <img
+              src="img/lands.jpg"
+              alt="Autumn Reverie"
+              onclick="openModal(this)"
+            />
+            <h4>Autumn Reverie</h4>
+            <p><strong>Size:</strong> 70 x 90cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 68,000SEK</p>
+            <button
+              style="color: red; font-weight: bold"
+              onclick="contactArtist('Autumn Reverie')"
+            >
+              Enquire
+            </button>
+          </div>
+          <div class="artwork-item">
+            <img
+              src="img/bugh.png"
+              alt="Monarch of the Mountain Pass"
+              onclick="openModal(this)"
+            />
+            <h4>Monarch of the Mountain Pass</h4>
+            <p><strong>Size:</strong> 81cm × 100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 126,000 SEK</p>
+            <button style="color: red" onclick="contactArtist('Springtime')">
+              Enquire
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buddhism Art Section -->
+      <section id="home" class="hero">
+        <h1>Buddhism Cave Art</h1>
+        <p>
+          This work constitutes a research-based visual interpretation informed
+          by the spiritual and artistic heritage of early Buddhist traditions
+          along the Silk Road. It engages historically with mural painting
+          practices while reframing them through contemporary material and
+          pictorial methods.
+        </p>
+        <p>
+          The Kizil Caves, situated along the northern bank of the Muzart River
+          in Kösen (ancient Qiuci), Xinjiang, represent some of the earliest and
+          most significant surviving examples of Buddhist cave art in Central
+          Asia.
+        </p>
+      </section>
+      <div class="art-section">
+        <h3>Buddhism Cave Art</h3>
+        <div class="artwork-container">
+          <!-- Artwork Items -->
+          <div class="artwork-item">
+            <img
+              src="img/ming1.jpg"
+              alt="Buddhism Artwork 1"
+              onclick="openModal(this)"
+            />
+            <h4>Apsara</h4>
+            <p><strong>Size:</strong> 54x72cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 56,000SEK</p>
+            <button onclick="contactArtist('Buddhism Artwork 1')">
+              Inquire
+            </button>
+          </div>
+          <!-- Repeat other artworks similarly -->
+          <div class="artwork-item">
+            <img
+              src="img/ming2.jpg"
+              alt="Buddhism Artwork 1"
+              onclick="openModal(this)"
+            />
+            <h4>The temptation of Buddha -Frestelse</h4>
+            <p><strong>Size:</strong> 81x100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 58,000SEK</p>
+            <button onclick="contactArtist('Buddhism Artwork 1')">
+              Inquire
+            </button>
+          </div>
+          <div class="artwork-item">
+            <img
+              src="img/ming3.jpg"
+              alt="Buddhism Artwork 1"
+              onclick="openModal(this)"
+            />
+            <h4>The Adam's - in the beginning</h4>
+            <p><strong>Size:</strong> 81x100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong> 58,000SEK</p>
+            <button onclick="contactArtist('Buddhism Artwork 1')">
+              Inquire
+            </button>
+          </div>
+          <div class="artwork-item">
+            <img
+              src="img/ming4.jpg"
+              alt="Buddhism Artwork 1"
+              onclick="openModal(this)"
+            />
+            <h4>Predikan - Preaching</h4>
+            <p><strong>Size:</strong> 81x100cm</p>
+            <p><strong>Material:</strong> Oil on Canvas</p>
+            <p><strong>Price:</strong>58,000SEK</p>
+            <button onclick="contactArtist('Buddhism Artwork 1')">
+              Inquire
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Modal for Image Zoom -->
     <div id="imgModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImg">
-        <div id="caption"></div>
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImg" />
+      <div id="caption"></div>
     </div>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Kaiser A ÖzHun | All Rights Reserved</p>
-       <a style=" display: block; padding: 1rem; color: brown;" href="https://www.astoriafineart.com/artist/317/Adam-Smith"  target="_blank">Astoria Art for sell</a>
-       <p><a href="https://wildwings.com/" style=" display: block; padding: 1rem; color: brown;" target="_blank">Wild wings Art</a></p><p><a href="https://www.martinridley.com" style=" display: block; padding: 1rem; color: brown;" target="_blank">Wild life Art</a></p>
-       <a href="https://artworks.com" style=" display: block; padding: 1rem; color: brown;" target="_blank" >Singapore</a>
-       <a href="https://renatomuccillo.com/home.html" style=" display: block; padding: 1rem; color: brown;" target="_blank" >Menzire</a>
+      <p>&copy; 2025 Kaiser A ÖzHun | All Rights Reserved</p>
+      <a
+        style="display: block; padding: 1rem; color: brown"
+        href="https://www.astoriafineart.com/artist/317/Adam-Smith"
+        target="_blank"
+        >Astoria Art for sell</a
+      >
+      <p>
+        <a
+          href="https://wildwings.com/"
+          style="display: block; padding: 1rem; color: brown"
+          target="_blank"
+          >Wild wings Art</a
+        >
+      </p>
+      <p>
+        <a
+          href="https://www.martinridley.com"
+          style="display: block; padding: 1rem; color: brown"
+          target="_blank"
+          >Wild life Art</a
+        >
+      </p>
+      <a
+        href="https://artworks.com"
+        style="display: block; padding: 1rem; color: brown"
+        target="_blank"
+        >Singapore</a
+      >
+      <a
+        href="https://renatomuccillo.com/home.html"
+        style="display: block; padding: 1rem; color: brown"
+        target="_blank"
+        >Menzire</a
+      >
     </footer>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
