@@ -1,201 +1,170 @@
+<!-- FIRST TIME: You must open your Gmail pen1921@gmail.com and click Activate from FormSubmit after first test, otherwise mails are blocked -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Kaiser A ÖzHun</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.25rem;
-      margin-top: 1rem;
-    }
-
-    nav {
-      background-color: #34495e;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-    color: #5cd890;
-}
-    #contact-form-section {
-      max-width: 800px;
-      margin: 50px auto;
-      background: white;
-      padding: 40px 30px;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    #contact-form-section h2 {
-      text-align: center;
-      color: #2c3e50;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-    }
-
-    form {
-      display: grid;
-      gap: 20px;
-    }
-
-    label {
-      font-size: 1.1rem;
-      color: #2c3e50;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 14px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-      outline: none;
-      transition: border-color 0.3s ease;
-    }
-
-    input:focus, textarea:focus {
-      border-color: #3498db;
-    }
-
-    button {
-      background-color: #3498db;
-      color: white;
-      padding: 15px;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #2980b9;
-    }
-
-    .form-status {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 1.1rem;
-      color: green;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #34495e;
-      color: white;
-      padding: 20px 0;
-      margin-top: 60px;
-    }
-
-    @media screen and (max-width: 768px) {
-      #contact-form-section {
-        padding: 25px 20px;
-      }
-
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      nav a {
-        margin: 0 8px;
-        font-size: 1rem;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Kaiser A ÖzHun</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Georgia,serif;background:#faf9f6;color:#1a1a1a;line-height:1.6;padding:40px 20px}
+  .wrap{max-width:560px;margin:0 auto}
+  h1{font-family:Georgia,serif;font-weight:400;font-size:32px;letter-spacing:-0.02em;margin-bottom:8px}
+  .sub{font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#888;margin-bottom:32px}
+  .note{font-family:Helvetica,Arial,sans-serif;font-size:11px;line-height:1.5;color:#8a8580;border:1px solid #e8e5e0;background:#fff;padding:12px 14px;margin-bottom:28px}
+  form{border:1px solid #1a1a1a;padding:28px;background:#fff}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:520px){.row{grid-template-columns:1fr}}
+  label{font-family:Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#555;display:block;margin-bottom:6px}
+  input,select,textarea{width:100%;border:1px solid #d9d5d0;padding:12px 14px;font-family:Georgia,serif;font-size:15px;background:#fffcf9;outline:none;transition:border-color .2s}
+  input:focus,select:focus,textarea:focus{border-color:#1a1a1a;background:#fff}
+  textarea{min-height:140px;resize:vertical}
+  .field{margin-bottom:18px}
+  .honey{position:absolute;left:-5000px;top:auto;width:1px;height:1px;overflow:hidden}
+  button{width:100%;background:#1a1a1a;color:#faf9f6;border:1px solid #1a1a1a;padding:14px;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;cursor:pointer;transition:all .2s}
+  button:hover{background:transparent;color:#1a1a1a}
+  button:disabled{opacity:.4;cursor:not-allowed}
+  .msg{margin-top:18px;padding:14px;border:1px solid;font-family:Helvetica,Arial,sans-serif;font-size:13px;display:none}
+  .msg.ok{display:block;border-color:#1a1a1a;background:#f6f5f2;color:#1a1a1a}
+  .msg.err{display:block;border-color:#c7a0a0;background:#fdf6f6;color:#6b2a2a}
+  .fallback{margin-top:22px;font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#888;text-align:center}
+  .fallback a{color:#1a1a1a;text-decoration:underline;text-underline-offset:3px}
+</style>
 </head>
 <body>
+<div class="wrap">
+  <h1>Kaiser A ÖzHun</h1>
+  <div class="sub">Inquiry — Gallery Contact</div>
+  <div class="note">
+    <strong>IMPORTANT:</strong> FIRST TIME: You must open your Gmail <strong>pen1921@gmail.com</strong> and click <em>Activate</em> from FormSubmit after first test, otherwise mails are blocked. Check Spam if you don't see it.
+  </div>
 
-  <!-- Header Section -->
-  <header>
-    <h1>Kaiser A ÖzHun</h1>
-    <p><strong>Contact Me</strong></p>
-  </header>
+  <form id="kaiser-form" autocomplete="on">
+    <!-- Honeypot for bots -->
+    <div class="honey" aria-hidden="true">
+      <label>Leave this empty</label>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off">
+    </div>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="./index.html">Home</a>
-    <a href="./contact.html">Contact</a>
-</nav>
+    <!-- FormSubmit config -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" id="hidden-subject" value="New Gallery Inquiry">
 
-  <!-- Contact Form Section -->
-  <section id="contact-form-section">
-    <h2>Contact Me</h2>
-    <form id="contact-form" onsubmit="sendEmail(event)">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required />
+    <div class="row">
+      <div class="field">
+        <label for="name">Name *</label>
+        <input id="name" name="name" type="text" required placeholder="Full name">
+      </div>
+      <div class="field">
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required placeholder="your@email.com">
+      </div>
+    </div>
 
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required />
+    <div class="row">
+      <div class="field">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="General Inquiry">General Inquiry</option>
+          <option value="Artwork Availability">Artwork Availability</option>
+          <option value="Commission Request">Commission Request</option>
+          <option value="Exhibition">Exhibition</option>
+          <option value="Press">Press</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="artwork">Artwork / Reference</label>
+        <input id="artwork" name="artwork" type="text" placeholder="Title or ID (optional)">
+      </div>
+    </div>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+    <div class="field">
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" required placeholder="Tell me about your inquiry..."></textarea>
+    </div>
 
-      <button type="submit">Send Message</button>
-    </form>
-    <p id="form-status" class="form-status"></p>
-  </section>
+    <button type="submit" id="submit-btn">Send Inquiry</button>
+    <div id="form-msg" class="msg"></div>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2025 Kaiser A ÖzHun | All Rights Reserved</p>
-  </footer>
+    <div class="fallback">
+      Trouble sending? <a href="mailto:pen1921@gmail.com?subject=Gallery%20Inquiry">Email directly to pen1921@gmail.com</a>
+    </div>
+  </form>
+</div>
 
-  <!-- EmailJS Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-  (function(){
-    emailjs.init("KzLgsLbovLbr-VT23"); // replace this. 
+  const form = document.getElementById('kaiser-form');
+  const btn = document.getElementById('submit-btn');
+  const msgBox = document.getElementById('form-msg');
+  const hiddenSubject = document.getElementById('hidden-subject');
 
-  function sendEmail(event) {
-    event.preventDefault();
-
-    const templateParams = {
-      name: document.querySelector("#name").value,
-      email: document.querySelector("#email").value,
-      message: document.querySelector("#message").value,
-    };
-
-    emailjs.send("service_2k0eok8", "gallery_mijz12y", templateParams)
-      .then(response => {
-        console.log("✅ Email sent", response);
-        document.getElementById("form-status").textContent = "✅ Message sent successfully!";
-        document.getElementById("contact-form").reset();
-      })
-      .catch(error => {
-        console.error("❌ Failed to send email:", error);
-        document.getElementById("form-status").textContent = "❌ Failed to send message. Please try again.";
-      });
+  function showMsg(type, text){
+    msgBox.className = 'msg ' + (type === 'ok' ? 'ok' : 'err');
+    msgBox.textContent = text;
+    msgBox.style.display = 'block';
   }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Honeypot check
+    if(form._honey && form._honey.value){
+      showMsg('ok', 'Thank you, inquiry sent — I will reply to your email');
+      form.reset();
+      return;
+    }
+
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const subjectSel = form.subject.value;
+    const artwork = form.artwork.value.trim();
+    const message = form.message.value.trim();
+
+    // Build dynamic _subject for inbox clarity
+    hiddenSubject.value = '[' + subjectSel + '] ' + (artwork ? artwork + ' — ' : '') + name;
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    msgBox.style.display = 'none';
+
+    try {
+      const payload = {
+        name: name,
+        email: email,
+        subject: subjectSel,
+        artwork: artwork,
+        message: message,
+        _subject: hiddenSubject.value,
+        _captcha: "false",
+        _template: "table",
+        _honey: ""
+      };
+
+      const res = await fetch('https://formsubmit.co/ajax/pen1921@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json();
+
+      if(res.ok){
+        showMsg('ok', 'Thank you, inquiry sent — I will reply to your email');
+        form.reset();
+      } else {
+        throw new Error(data.message || 'Failed');
+      }
+    } catch (err){
+      showMsg('err', 'Failed, please email directly to pen1921@gmail.com');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Send Inquiry';
+    }
+  });
 </script>
 </body>
 </html>
